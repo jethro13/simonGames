@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="iso-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Simon Says</title>
+  <script data-main="js/main" src="js/lib/require.min.js"></script>
+</head>
+<body>
+<h1 id="titre">Simon<span>Says</span></h1>
+    <div class="setting">
+      <div class="game-info">
+            <h2>Manche: <span data-round="0">0</span></h2>
+          </div>
+          <p data-action="lose">PERDU après <span data-round="0"></span> Manches!</p>
+
+          <button id="str" data-action="start" >Start</button>
+          <div class="game-options">
+            <h2>Mode de jeu:</h2>
+            <input type="radio" name="mode" value="normal" checked>Normal<br>
+            <input type="radio" name="mode" value="sound-only">Sonore<br>
+            <input type="radio" name="mode" value="light-only">Visuel<br>
+            <input type="radio" name="mode" value="free-board">Libre
+          </div></div>
+      <div class="container">
+        <div class="simon">
+        <div id="top" class="line">
+          <div class="touch tile red" data-tile="1" id="red" style="background-color:red;"></div>
+        </div>
+        <div id="mid" class="line">
+          <div class="touch tile yellow" id="yellow" data-tile="3" style="background-color:yellow;"></div>
+          <div class="touch tile blue" data-tile="2" id="blue" style="background-color: blue;"></div>
+        </div>
+        <div id="bot" class="line">
+          <div class="touch tile green" id="green" data-tile="4" style="background-color:green;"></div>
+        </div>
+      </div>
+      </div>
+<div data-action="sound"></div>
+<script src="click.js" charset="utf-8"></script>
+</body>
+</html>
